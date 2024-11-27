@@ -14,7 +14,7 @@ export default class e {
       .replaceAll("/", "-")
       .replace(", ", "T")
       .replace(" ", "");
-    let spit = "" + (Math.random() + 1).toString(36).substring(7);
+    let spit = (Math.random() + 1).toString(36).substring(7);
     let extention = ".xlsx";
     return [name, date_stamp, spit].join("-") + extention;
   }
