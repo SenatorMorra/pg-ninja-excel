@@ -29,9 +29,9 @@ additional library for `pg-ninja` that add option convert result of SELECT query
 ### **Import**
 
 ```
-import pg-excel from 'pg-ninja-excel'
+import excel from 'pg-ninja-excel'
 
-const converter = new pg-excel();
+const converter = new excel();
 ```
 
 ### **constructor**
