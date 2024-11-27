@@ -1,6 +1,6 @@
 {
   "name": "pg-ninja-excel",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Node.js lightweight asynchronous library for export PostgreSQL queries (SELECT) to Excel",
   "main": "index.js",
   "scripts": {
@@ -12,5 +12,28 @@
   "type": "module",
   "dependencies": {
     "exceljs": "^4.4.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SenatorMorra/pg-ninja-excel.git"
+  },
+  "keywords": [
+    "pg",
+    "postgres",
+    "postgresql",
+    "database",
+    "testing",
+    "excel",
+    "xlsx"
+  ],
+  "author": "Senator Morra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SenatorMorra/pg-ninja-excel/issues"
+  },
+  "homepage": "https://github.com/SenatorMorra/pg-ninja-excel#readme",
+  "dependencies": {
+    "exceljs": "^4.4.0"
+  },
+  "type": "module"
 }
