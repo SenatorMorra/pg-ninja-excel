@@ -4,7 +4,6 @@
   "description": "Node.js lightweight asynchronous library for export PostgreSQL queries (SELECT) to Excel",
   "main": "index.js",
   "scripts": {
-<<<<<<< HEAD
     "start": "node --watch index.js"
   },
   "keywords": ["pg-ninja", "postgresql", "postgres", "excel", "xlsx"],
@@ -13,9 +12,6 @@
   "type": "module",
   "dependencies": {
     "exceljs": "^4.4.0"
-  }
-=======
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -40,5 +36,4 @@
     "exceljs": "^4.4.0"
   },
   "type": "module"
->>>>>>> 12c65ad (~package.json: semantics update)
 }
