@@ -1,6 +1,6 @@
 {
   "name": "pg-ninja-excel",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Node.js lightweight asynchronous library for export PostgreSQL queries (SELECT) to Excel",
   "main": "index.js",
   "scripts": {
