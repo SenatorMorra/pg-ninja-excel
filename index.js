@@ -91,8 +91,4 @@ export default class e {
       );
     });
   }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 12c65ad (~package.json: semantics update)
