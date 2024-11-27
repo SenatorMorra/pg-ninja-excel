@@ -19,19 +19,17 @@ export default class e {
     return [name, date_stamp, spit].join("-") + extention;
   }
 
-  async pg_to_excel(rows, path = "/") {
+  async pg_to_excel(rows, path = "./") {
     return new Promise((resolve, reject) => {
       const workbook = new excel.Workbook();
 
-      workbook.creator = "pg-to-excel.js";
-      workbook.lastModifiedBy = "pg-to-excel.js";
+      workbook.creator = "pg-ninja-excel.js";
+      workbook.lastModifiedBy = "pg-ninja-excel.js";
       workbook.created = new Date();
       workbook.modified = new Date();
       workbook.lastPrinted = new Date();
 
-      const sheet = workbook.addWorksheet("PostgreSQL Result", {
-        views: [{ showGridLines: true }],
-      });
+      const sheet = workbook.addWorksheet("PostgreSQL Result");
       const worksheet = workbook.getWorksheet("PostgreSQL Result");
 
       let header = [];
