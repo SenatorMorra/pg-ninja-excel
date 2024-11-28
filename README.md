@@ -67,7 +67,13 @@ creates Excel file from your object of PostgreSQL responce.
 syntax:
 
 ```
-converter.pg_to_excel(rows, path='./'): Promise<boolean>
+converter.pg_to_excel(rows, path='./'): Promise<string/object>
+```
+
+result:
+```
+resolve - path to file with file name (string)
+reject - error
 ```
 
 in case of you want to create Excel depends on something different, but not PostgreSQL responce, template of rows:
@@ -99,7 +105,7 @@ const converter = new excel();
 
 database.query('SELECT * FROM customers;').then(res => {
     excel.pg_to_excel(res?.rows).then(res => {
-        console.log('Excel report was created in current folder');
+        console.log('Excel report was created in this path and file name: ', res);
     }, err => {
         console.log('Excel error: ', err);
     });
