@@ -29,9 +29,9 @@ additional library for `pg-ninja` that add option convert result of SELECT query
 ### **Import**
 
 ```
-import pg-excel from 'pg-ninja-excel'
+import excel from 'pg-ninja-excel'
 
-const converter = new pg-excel();
+const converter = new excel();
 ```
 
 ### **constructor**
@@ -82,9 +82,31 @@ in case of you want to create Excel depends on something different, but not Post
 and also you can specify path. default path `./` means file will be near to your script. change directory, for example `./report/` and if you want to create your own file you can write name by yourself, for example `./report/test1.xlsx`.
 **otherwise always use `/` in end of your path!**
 
+** ! do not `return` reject-available function ! **
+
 # Example
 
-will be a bit later 
+with using `pg-ninja` (install `pg-ninja` with `$ npm install pg-ninja`)
+
+```
+import pg from 'pg-ninja';
+import excel from 'pg-ninja-excel';
+
+const database = new pg({
+    connectionString: process.env.PG_CONNECTION
+});
+const converter = new excel();
+
+database.query('SELECT * FROM customers;').then(res => {
+    excel.pg_to_excel(res?.rows).then(res => {
+        console.log('Excel report was created in current folder');
+    }, err => {
+        console.log('Excel error: ', err);
+    });
+}, err => {
+    console.log('PostgreSQL error: ', err);
+});
+```
 
 # Summary
 
