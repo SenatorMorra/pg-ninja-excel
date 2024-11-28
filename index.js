@@ -83,10 +83,10 @@ export default class e {
       if (path.at(-1) == "/") path += this.create_file_name();
       workbook.xlsx.writeFile(path).then(
         (res) => {
-          resolve(true);
+          resolve(path);
         },
         (err) => {
-          reject(false);
+          reject(err);
         }
       );
     });
